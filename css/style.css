@@ -4,13 +4,12 @@
     justify-content: space-between;
     align-items: center;
     background-color: #ddede0;
-    padding: 1.5rem 4rem 1 rem;
+    padding: 1.7rem 1rem 1rem;
 }
 
 .nav-logo {
     width: 145px; 
     height: auto;
-    margin-top: auto;
 }
 
 .nav-links{
@@ -56,7 +55,7 @@
     cursor: pointer;
     border-radius: 5px;
     display: flex;
-    gap: 15px;
+    gap: 10px;
     transition: background-color 0.3s ease;
 }
 
@@ -71,10 +70,133 @@
 }
 
 
-.main-text{
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #faf3e0;
     background-image: url("/svg/wave(5).svg");
     background-repeat: none;
-    background-size: cover;
-    height: 600px;
-    
+    background-size: cover; 
+    padding-top: 5rem;
+    gap: 135px;
+}
+
+.main-text h2{
+margin-bottom: 2rem;
+font-size: 3.5rem;
+font-weight: bold;
+}
+
+.main-text p{
+margin-bottom: 1rem;
+margin-top: 3rem;
+}
+
+.main-text-green{
+color: #7EB493;
+    font-weight: bold;
+}
+
+.main-text-hollow{
+    color: transparent;
+    -webkit-text-stroke: 1.7px #333;
+    font-weight: bold;
+}
+
+.main-p {
+    color: #666;
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    max-width: 650px;
+}
+.main-icons{
+    display: flex;
+    gap: 4rem;
+    margin-top:4rem;
+}
+
+.main-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 80px;
+    border: 4px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-icons img{
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.main-icons a:hover{
+    background-color: #333;
+}
+
+.main-icons a:hover img {
+    filter:grayscale(100%);   
+}
+
+.main-photo img {
+    width: 750px;
+    height: auto;
+}
+
+#skills{
+    text-align: center;
+    background-color: #faf3e0;
+    padding-top: 10rem;
+    background-image: url("/svg/wave(1).svg");
+    background-repeat:no-repeat;
+    background-size:auto; 
+    background-position: bottom;
+}
+
+.skills h2{
+    margin-bottom: 6rem;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4rem 2rem;
+    align-items: center;
+    justify-content: center;
+    justify-items: center; /* Center items horizontally */
+    padding-bottom: 20rem;
+}
+
+.skill-item {
+    border: 4px solid #333;
+    align-content: center;
+    border-radius: 8px;
+    width: 185px;
+    height: 170px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item img{
+ height: 80px;
+ width: 80px;
+}
+
+.skill-item p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.experience{
+    text-align: center;
+    background-color: #ddede0;
+    background-image: url("/svg/wave.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: bottom;
 }
