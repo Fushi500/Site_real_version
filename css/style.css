@@ -69,6 +69,59 @@
     filter: invert(100%);
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ddede0;
+    padding: 1rem 0;
+}
+
+.nav-links.active li {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
 
 .main{
     display: flex;
@@ -76,7 +129,7 @@
     align-items: center;
     background-color: #faf3e0;
     background-image: url("/svg/wave(5).svg");
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: cover; 
     padding-top: 5rem;
     gap: 135px;
@@ -142,14 +195,15 @@ color: #7EB493;
 }
 
 .main-photo img {
-    width: 750px;
+    width: 100%;
+    max-width: 750px;
     height: auto;
 }
 
 #skills{
     text-align: center;
     background-color: #faf3e0;
-    padding-top: 10rem;
+    padding-top: 15rem;
     background-image: url("/svg/wave(1).svg");
     background-repeat:no-repeat;
     background-size:auto; 
@@ -157,7 +211,7 @@ color: #7EB493;
 }
 
 .skills h2{
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
     font-size: 4rem;
     font-weight: bold;
 }
@@ -195,8 +249,308 @@ color: #7EB493;
 .experience{
     text-align: center;
     background-color: #ddede0;
-    background-image: url("/svg/wave.svg");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: bottom;
+     
 }
+
+.experience-container h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.highlight-experience{
+    font-weight: bold;
+    color: white;
+}
+
+.experience-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.experience-item {
+    background-color: #264653;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.experience-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.experience-details h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.experience-details p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.experience-description {
+    font-size: 1.1rem;
+    color: #BFD7EA;
+    line-height: 1.6;
+}
+
+
+.about-me-section{
+    background-color: #faf3e0;
+    background-image: url("/svg/wave.svg"), url("/svg/wave(3).svg");
+    background-repeat: no-repeat,no-repeat;
+    background-size: auto,auto;
+    background-position:top,bottom;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-top: 25rem;
+    padding-bottom: 13rem;
+}
+
+.about-me-content {
+    display: flex;
+    gap: 16rem;
+    align-items: center;
+}
+
+.about-me-image {
+    padding-left: 12rem;
+}
+
+.about-me-image img {
+    width: 80%;
+    height: auto;
+}
+
+.about-me-text {
+    flex: 2;
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 2.3rem;
+    max-width: 700px;
+}
+
+.about-me-text h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.projects-section {
+    padding: 3rem 20rem;
+    background-color: #5f8575;
+    
+    
+}
+
+.projects-section {
+    padding: 3rem 20rem;
+    background-color: #5f8575;
+}
+
+.projects-container {
+    text-align: center;
+}
+
+.projects-container h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    color: black;
+}
+
+.projects-grid {
+    display: inline-grid;
+    gap: 5rem 5rem;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: rgba(188, 186, 186, 0.816);
+    border: 5px solid black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-text {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+.project-text h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-text h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-image {
+    flex: 1;
+    padding: 1rem;
+}
+
+.project-image img {
+    width: 70%;
+    height: auto;
+    border-radius: 0;
+    border: 2px solid black;
+    box-shadow: rgba(240, 156, 46, 0.4) -5px 5px, rgba(240, 156, 46, 0.3) -10px 10px, rgba(240, 156, 46, 0.2) -15px 15px, rgba(240, 156, 46, 0.1) -20px 20px, rgba(240, 156, 46, 0.05) -25px 25px;
+}
+.share-icon{
+    width: 40px;
+    height: 40px;
+}
+
+.contact-main {
+    background-image: url("/svg/wave(4).svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #faf3e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+    padding: 2rem; /* Add padding for better spacing */
+}
+
+.contact-wrapper {
+    padding-top: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 14rem; /* Increase gap between lottie-player and form */
+    max-width: 1650px; /* Center the content within a max-width */
+    margin: 0 auto; /* Center the wrapper horizontally */
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 auto;
+    border-radius: 20px;
+    align-items: center; /* Center form content */
+}
+
+.contact h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 2rem;
+}
+
+.form-group input{
+    width: 600px;
+    padding: 1rem;
+    border-radius: 50px;
+    border: none;
+    background-color: #E8E8E8;
+    margin-bottom: 2rem;
+    font-size: 1.2rem; /* Increase font size */
+}
+
+.form-group input.input-1::placeholder {
+    color: #999; /* Set the color of the placeholder text */
+    background: url('/Photos/icons8-user-26.png') no-repeat;
+    background-size: 20px 20px; /* Adjust the size of the image */
+    background-position: left center;
+    padding-left: 30px;  
+}
+
+.form-group input.input-2::placeholder {
+    color: #999; /* Set the color of the placeholder text */
+    background: url('/Photos/icons8-email-48.png') no-repeat;
+    background-size: 20px 20px; /* Adjust the size of the image */
+    background-position: left center;
+    padding-left: 30px;  
+}
+
+.form-group textarea {
+    width: 100%;
+    height: 20rem;
+    padding: 1rem;
+    border-radius: 50px;
+    border: none;
+    max-width: 600px;
+    background-color: #E8E8E8;
+    margin-bottom: 2rem;
+    font-size: 1.2rem; /* Increase font size */
+    resize: none; /* Disable resizing */
+}
+
+.submit-button {
+    width: 600px;
+    padding: 1.5rem; /* Increase padding */
+    border-radius: 50px;
+    border: none;
+    background-color: #3e697a;
+    font-size: 1.5rem; /* Increase font size */
+    color: white; /* Change text color to white */
+}
+
+.submit-button:hover {
+    background-color: #444;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 2rem;
+    }
+
+    .main-photo img {
+        max-width: 100%;
+    }
+}
+
+

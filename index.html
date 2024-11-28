@@ -22,6 +22,11 @@
             Resume
             <img src="Photos/downloads.png" alt="Save Icon" class="nav-resume-icon">
         </button>
+        <button class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </nav>
 
     <main>
@@ -111,7 +116,7 @@
         </section>
 
 
-        <section id="experience" class="experience">
+        <section class="experience">
             <div class="experience-container">
                 <h2><span class="highlight-experience">My Experience</span></h2>
                 <div class="experience-grid">
@@ -153,9 +158,115 @@
                 </div>
                 </div>
         </section>
+
+        <section id="about-me" class="about-me-section">
+            <div class="about-me-content">
+                <div class="about-me-image">
+                    <img src="Photos/tree-616817_1280.png" alt="A Photo of Me">
+                </div>
+                <div class="about-me-text">
+                    <h1>ABOUT ME</h1><br>
+                    <p>
+                        Hello! I’m Șerban Darius, a passionate software developer with a keen interest in full-stack
+                        development and back-end technologies. From an early age, I’ve been intrigued by how things work
+                        behind the scenes, which naturally led me to pursue computer science. My journey has taken me
+                        from learning the basics of coding to creating meaningful projects that I’m proud of today.
+                        <br><br>
+                        Outside of programming, you’ll often find me experimenting with anime-inspired 3D printing,
+                        where I bring characters and scenes to life. I also have a deep appreciation for visual arts and
+                        design, always exploring new ways to blend my skills in technology and creativity.
+                        <br><br>
+                        I love challenges, whether it's developing scalable solutions, exploring new technologies, or
+                        contributing to open-source projects. My goal is to continuously learn and grow as a developer
+                        while creating digital experiences that are impactful and innovative.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="projects-container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <div class="project-text">
+                            <h1>01</h1>
+                            <h3>Proiect Ceva</h3>
+                        </div>
+                        <div class="project-image">
+                            <img src="Photos/plant.png" alt="Project One">
+                        </div>
+                        <img src="Photos/share.png" alt="Share Icon" class="share-icon">
+                    </div>
+                    <div class="project-item">
+                        <div class="project-text">
+                            <h1>02</h1>
+                            <h3>Proiect Java</h3>
+                        </div>
+                        <div class="project-image">
+                            <img src="Photos/plant.png" alt="Project Two">
+                        </div>
+                        <img src="Photos/share.png" alt="Share Icon" class="share-icon large-icon">
+                    </div>
+                    <div class="project-item">
+                        <div class="project-text">
+                            <h1>03</h3>
+                            <h3>Proiect Ceva</h3>
+                        </div>
+                        <div class="project-image">
+                            <img src="Photos/plant.png" alt="Project Three">
+                        </div>
+                        <img src="Photos/share.png" alt="Share Icon" class="share-icon large-icon">
+                    </div>
+                    <div class="project-item">
+                        <div class="project-text">
+                            <h1>04</h1>
+                            <h3>Proiect Nou</h3>
+                        </div>
+                        <div class="project-image">
+                            <img src="Photos/plant.png" alt="Project Four">
+                        </div>
+                        <img src="Photos/share.png" alt="Share Icon" class="share-icon large-icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-main">
+            <div class="contact-wrapper">
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
+                <lottie-player src="https://lottie.host/7e8a5333-f617-4f97-9184-af8a2c3834ce/58gmRYF4Gp.json" background="##FFFFFF" speed="1" style="width: 700px; height: 700px" loop autoplay direction="1" mode="normal"></lottie-player>
+                <div class="contact">
+                    <h2>Get in touch</h2>
+                    <div class="contact-content">
+                        <form action="submit_form.php" method="post" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" class="input-1" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="input-2" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-
+    
     </main>
-</body>
 
+    <footer class="footer">
+        <p>&copy; 2024 Șerban Darius. No,maybe 1 pls ? :o rights reserved.</p>
+        <p>Designed and Developed by Șerban Darius</p>
+    </footer>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
 </html>
