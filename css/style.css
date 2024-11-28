@@ -128,7 +128,7 @@
     justify-content: center;
     align-items: center;
     background-color: #faf3e0;
-    background-image: url("/svg/wave(5).svg");
+    background-image: url("/svg/wave5.svg");
     background-repeat: no-repeat;
     background-size: cover; 
     padding-top: 5rem;
@@ -204,7 +204,7 @@ color: #7EB493;
     text-align: center;
     background-color: #faf3e0;
     padding-top: 15rem;
-    background-image: url("/svg/wave(1).svg");
+    background-image: url("/svg/wave1.svg");
     background-repeat:no-repeat;
     background-size:auto; 
     background-position: bottom;
@@ -311,7 +311,7 @@ color: #7EB493;
 
 .about-me-section{
     background-color: #faf3e0;
-    background-image: url("/svg/wave.svg"), url("/svg/wave(3).svg");
+    background-image: url("/svg/wave.svg"), url("/svg/wave3.svg");
     background-repeat: no-repeat,no-repeat;
     background-size: auto,auto;
     background-position:top,bottom;
@@ -436,7 +436,7 @@ color: #7EB493;
 }
 
 .contact-main {
-    background-image: url("/svg/wave(4).svg");
+    background-image: url("/svg/wave4.svg");
     background-repeat: no-repeat;
     background-position: top;
     background-color: #faf3e0;
