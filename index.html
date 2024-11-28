@@ -22,11 +22,11 @@
             Resume
             <img src="Photos/downloads.png" alt="Save Icon" class="nav-resume-icon">
         </button>
-        <button class="hamburger" id="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 
     <main>
@@ -263,9 +263,10 @@
         <p>&copy; 2024 Șerban Darius. No,maybe 1 pls ? :o rights reserved.</p>
         <p>Designed and Developed by Șerban Darius</p>
     </footer>
+
     <script>
-        document.getElementById('hamburger').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.nav').classList.toggle('active');
         });
     </script>
 </body>
